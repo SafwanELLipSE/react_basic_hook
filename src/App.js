@@ -1,23 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import Demo from "./Demo";
+import Son from "./compoents/Son";
+import {DadaProvider} from "./compoents/Mycontext";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Demo></Demo>
+        {/*<Son name="Puti name is Kalam"/>*/}
+        <DadaProvider value="Dada Send massage to puti">
+            <Son/>
+        </DadaProvider>
     </div>
   );
 }
